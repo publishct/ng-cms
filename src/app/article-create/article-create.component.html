@@ -1,0 +1,50 @@
+<h1>Create a New Article</h1>
+
+<form class="summary" (ngSubmit)="onSubmit()" #createArticle="ngForm">
+  
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+  
+  <div>
+    <label for="title">Title</label>
+    <input [(ngModel)]="article.title" type="text" name="title" id="title">
+    <div *ngIf="errors.title">{{errors.title.message}}</div>
+  </div>
+
+  <!-- <div>
+    <label for="title">Title</label>
+    <input [(ngModel)]="article.title" type="text" name="title" id="title">
+    <div *ngIf="errors.title">{{errors.title.message}}</div>
+  </div> -->
+  <!-- <div>
+    <label for="slug">Slug</label>
+    <input [(ngModel)]="article.slug" type="text" name="slug" id="slug">
+    <div *ngIf="errors.slug">{{errors.slug.message}}</div>
+  </div>  -->
+
+  <div>
+    <label for="keywords">Key Words</label>
+    <input [(ngModel)]="article.keywords" type="text" name="keywords" id="keywords">
+    <div *ngIf="errors.keywords">{{errors.keywords.message}}</div>
+  </div>
+
+  <div>
+    <label for="published">Created</label>
+    <input [(ngModel)]="article.created" type="date" name="created" id="created">
+    <div *ngIf="errors.created">{{errors.created.message}}</div>
+  </div>
+
+  <div>
+    <label for="published">Published On</label>
+    <input [(ngModel)]="article.published" type="date" name="published" id="published">
+    <div *ngIf="errors.published">{{errors.published.message}}</div>
+  </div>
+
+  <div>
+    <label for="body">Body</label>
+    <input [(ngModel)]="article.body" type="text" name="body" id="body">
+    <div *ngIf="errors.body">{{errors.body.message}}</div>
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>

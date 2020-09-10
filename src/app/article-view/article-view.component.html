@@ -1,0 +1,10 @@
+<div class="summary" *ngIf="article">
+    <h1 class="views">{{article.title}} {{article.keywords}}</h1>
+    <div><strong>Title:</strong> {{article.title}}</div>
+    <div><strong>Body:</strong> {{article.body}}</div>
+    <div><strong>Published On:</strong> {{article.published}}</div>
+    <div><strong>Created:</strong> {{article.created}}</div>
+    <div><strong>Modified:</strong> {{article.modified}}</div>
+    <button [routerLink]="['/articles/edit/', article._id]">Edit</button>
+    <button (click)="deleteArticle(article._id)">Delete</button>
+  </div>

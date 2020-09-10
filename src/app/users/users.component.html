@@ -1,0 +1,9 @@
+<h1>Users</h1>
+<ul *ngIf="users">
+  <li class="summary" *ngFor="let user of users">
+    <a [routerLink]="['/users/view/', user._id]">{{user.username}}</a><br>
+    {{user.last_name}}, {{user.first_name}}<br>
+    <div>Created: {{user.created}}</div>
+    <hr>
+  </li>
+</ul>
